@@ -29,6 +29,7 @@ a {
 /* body안에 전체 위아래 간격 폭  */
 body {
     line-height: 1;
+    word-break: keep-all;
 }
 
 img {

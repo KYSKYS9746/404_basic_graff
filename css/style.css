@@ -1,0 +1,247 @@
+.inner {
+    /* 그리드 시스템의 가로 최대 크기 */
+    max-width: 1200px;
+    /* 박스를 가운데 오게함 */
+    margin: 0 auto;
+    /* 그리드 시스템의 가장자리 margin */
+    padding: 0 15px;
+
+}
+
+.title {
+    max-width: 1200px;
+    margin: 0 auto 32px auto;
+    padding: 0 15px;
+}
+
+.title h2 {
+    font-size: 32px;
+    font-weight: 700;
+    margin: 0 0 16px 0;
+}
+
+.title p {
+    font-size: 16px;
+    /* font-weight: 700; */
+}
+
+.blind {
+    position: absolute;
+    clip: rect(0 0 0 0);
+    width: 1px;
+    height: 1px;
+    margin: -1px;
+    overflow: hidden;
+}
+
+.Header {
+    /* line-height 헤더를 중심으로 (graff li~li) 아래위로 80px  */
+    line-height: 80px;
+}
+
+.Header .inner {
+    display: flex;
+
+}
+
+.Header .Gnb {
+    /* 좌측 마진을 가득 줘서 우측으로 박스를 보냄. */
+    margin: 0 0 0 auto;
+}
+
+.Header .Gnb ul {
+    display: flex;
+    gap: 40px;
+}
+
+ .Header .Gnb ul a {
+    display: block;
+    font-size: 18px;
+    white-space: nowrap;
+} 
+
+.Header .search {
+    margin: 0 0 0 100px;
+    font-size: 24px;
+}
+
+.MainVisual .Main_visual_slide .itm {
+    height: 700px;
+}
+
+/* no-repeat center center/cover = 배경을 꽉 채우고 센터에 냅두고 짤리지않게 센터에 둔다?*/
+/* background-repeat 속성은 배경 이미지가 주어진 영역에 
+꽉 차지 않는 경우 이미지를 반복할 방식을 결정합니다. */
+/* cover 키워드는 배경 이미지가 짤리더라도 주어진 영역을 
+완전히 덮을 수 있도록 이미지를 크기를 맞춰줍니다. */
+
+.MainVisual .Main_visual_slide .itm01 {
+    background: url(../images/mainvisual01.jpg) no-repeat center center/cover;
+}
+
+.MainVisual .Main_visual_slide .itm02 {
+    background: url(../images/mainvisual02.jpg) no-repeat center center/cover;
+}
+
+.MainVisual .Main_visual_slide .itm03 {
+    background: url(../images/mainvisual03.jpg) no-repeat center center/cover;
+}
+
+.MainBasic {
+    padding: 120px 0 ;
+
+}
+
+ .MainBasic h2 {
+    text-align: center;
+}
+
+.MainBasic p {
+    /* 기본 font-weight가 400이므로 안써줘도 상관없다. */
+    text-align: center;
+} 
+
+.MainBasic .inner {
+    /* display: flex = 가로 컨테이너 박스가 형성 */
+    display: flex;
+    gap: 30px;
+}
+
+.MainBasic .inner>* {
+    flex: 1;
+}
+
+.MainBasic figure .img_wrap{
+    margin: 0 0 16px 0;
+}
+
+.MainBasic figure strong {
+    /* display: block = 하나의 박스 */
+    display: block;
+    margin: 0 0 16px 0;
+    text-align: center;
+}
+
+.MainBasic figure .order {
+    text-align: center;
+}
+
+.MainBasic figure a {
+    display: inline-block;
+    background: #333;
+    color: #fff;
+    text-align: center;
+    /* 좌우가 아래위보다 커야한다 */
+    /* px잘 모르겠다면 8의배수 */
+    padding: 8px 16px;
+    margin: 0 auto;
+}
+
+.MainProduct {
+    position: relative;
+    padding: 120px 0;
+    background: #f9f9f9;
+    
+
+}
+
+.MainProduct .main_product_slide {
+    margin: 0 -15px;
+}
+
+.MainProduct .img_wrap{
+    border: 3px solid #fff;
+} 
+
+.MainProduct figure {
+    padding: 0 15px;
+}
+
+.MainProduct .main_product_slide .slick-dots {
+    margin: 40px 0 0 0;
+    text-align: center;
+}
+
+.MainProduct .main_product_slide .slick-dots li{
+    display: inline-block;
+    margin: 0 2px;
+}
+
+.MainProduct .main_product_slide .slick-dots li button {
+    width: 20px;
+    height: 20px;
+    font-size: 10px;
+    background: #333;
+    color: #fff;
+    border-radius: 50%;
+    border: none;
+    cursor: pointer;
+    
+}
+
+.MainProduct .main_product_slide .slick-dots li.slick-active button{
+    background: #d90019;
+}
+
+.MainProduct .arrows {
+    position: absolute;
+    top:50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    max-width: 1400px;
+    width: 100%;
+    cursor: pointer;
+}
+
+.MainProduct .arrows i {
+    position: absolute;
+    top: 0;
+    transform: translate(0, -50%);
+
+    background: #333;
+    color: #fff;
+    padding: 10px;
+
+}
+
+.MainProduct .arrows .left {
+    left:0;
+}
+
+.MainProduct .arrows .right {
+    right:0;
+}
+
+.totop {
+    position: fixed;
+    bottom: 100px;
+    right: 100px;
+    z-index: 999;
+
+    visibility: hidden;
+    opacity: 0;
+
+    transition: 0.5s;
+
+    /* background: transparent = 배경색을 아예 뺌  */
+    background: transparent;
+    border: none;
+}
+
+.totop.on {
+    
+    visibility: visible;
+    opacity: 1;
+}
+
+
+
+
+.totop i {
+    background: #d90019;
+    color: #fff;
+    font-size: 24px;
+    padding: 5px;
+    border-radius: 4px;
+    cursor: pointer;
+}
